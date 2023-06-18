@@ -42,8 +42,8 @@ def extract_vector_features(image):
 dataset_path = '_test/'
 cat_folder_path = dataset_path + 'cat/'
 dog_folder_path = dataset_path + 'dog/'
-image_paths_cats = [cat_folder_path + 'cat_{}.jpg'.format(str(i).zfill(4)) for i in range(71, 80)]
-image_paths_dogs = [dog_folder_path + 'dog_{}.jpg'.format(str(i).zfill(4)) for i in range(45, 70)]
+image_paths_cats = [cat_folder_path + 'cat_{}.jpg'.format(str(i).zfill(4)) for i in range(71, 75)]
+image_paths_dogs = [dog_folder_path + 'dog_{}.jpg'.format(str(i).zfill(4)) for i in range(45, 49)]
 images_cats = [cv2.imread(image_path) for image_path in image_paths_cats]
 images_dogs = [cv2.imread(image_path) for image_path in image_paths_dogs]
 # Combine dogs and cats images and labels
@@ -141,8 +141,8 @@ vector_index = tree.insert("", "end", text="4", values=("Vector", knn_accuracy_v
 # Configure Treeview column widths
 tree.column("#0", width=50)
 tree.column("Extractor", width=100)
-tree.column("KNN Accuracy", width=100)
-tree.column("SVM Accuracy", width=100)
+tree.column("KNN Accuracy", width=80)
+tree.column("SVM Accuracy", width=80)
 
 # Pack the Treeview widget
 tree.pack()
